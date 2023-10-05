@@ -1,0 +1,11 @@
+body{
+    background-color: antiquewhite;
+    background-image: url(ldw.jpg);
+    background-repeat: no-repeat;
+    background-position-y: 300px ;
+    background-size: cover;
+}
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    color: hotpink;
+}

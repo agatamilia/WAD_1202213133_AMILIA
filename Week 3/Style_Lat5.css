@@ -1,0 +1,26 @@
+body{
+    background-color: beige;
+}
+h1{
+    text-align: center;
+    color: chocolate;
+}
+h2{
+    text-align: center;
+    color: darkgreen;
+}
+h3{
+    text-align: center;
+    color: olive;
+}
+
+p:not(.exclude){
+    color: black;
+    font-family: nunito;
+    /*text-decoration:line-through;*/
+    text-decoration-color: firebrick;
+}
+
+#text-1{
+    color: aquamarine;
+}

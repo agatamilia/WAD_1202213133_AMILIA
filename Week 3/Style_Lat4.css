@@ -1,0 +1,18 @@
+h1{
+    text-align: center;
+    color: chocolate;
+}
+h2{
+    text-align: center;
+    color: darkgreen;
+}
+h3{
+    text-align: center;
+    color: olive;
+}
+p:not(.exclude){
+    color: whitesmoke;
+    font-family: nunito;
+    text-decoration:line-through;
+    text-decoration-color: yellow;
+}
