@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<center><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEEK 3 JS</title>
+</head>
+<body>
+    <h3>JS change img</h3>
+    <img id="myImage" onclick="changeImage()" src="https://i.pinimg.com/originals/be/75/78/be75789ef49cbe124ecfde3e2d370921.jpg" widht="500" height="500">
+    <script>
+        function changeImage() {
+            var image = document.getElementById('myImage');
+            if (image.src.match("461a9d585f96")){
+                image.src = "https://i.pinimg.com/originals/be/75/78/be75789ef49cbe124ecfde3e2d370921.jpg";
+            } else{
+                image.src = "https://i.pinimg.com/736x/46/1a/9d/461a9d585f9682c67da9af37f68ad41b.jpg";
+            }
+        }
+    </script>
+</body></center>
+</html>

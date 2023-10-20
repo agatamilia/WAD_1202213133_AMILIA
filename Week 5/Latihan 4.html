@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<center><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEEK 3 JS</title>
+</head>
+<body>
+    <h3>JS validate input</h3>
+    <p>input number 1 and 10:</p>
+    <p id="demo">ketik tombol berikut untuk merubah css</p>
+    <input id="numb" type="number">
+    <button type="button" onclick="myFunction()">submit</button>
+    <script>
+        function myFunction() {
+            var x, text;
+            x = document.getElementById("numb").value;
+            if (isNaN(x) || x < 1 || x > 10){
+                text="input not valid";
+            } else{
+                text="input ok";
+            }
+            document.getElementById("demo").innerHTML=text;
+        }
+    </script>
+</body></center>
+</html>
