@@ -2,10 +2,10 @@
 
 require 'function.php';
 
-$plt = $_GET ["no_polisi"];
+$id = $_GET ["idBook"];
 
 
-if ( hapus($plt) > 0) {
+if ( hapus($id) > 0) {
     echo "
     <script>
         alert('DATA BERHASIL DIHAPUS');

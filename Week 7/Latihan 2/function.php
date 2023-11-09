@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost","root","","carwash");
+$conn = mysqli_connect("localhost","root","","snow");
 
 function read($query){
     global $conn;

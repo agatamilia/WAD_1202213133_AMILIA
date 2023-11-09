@@ -1,6 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost","root","","carwash");
-
+$conn = mysqli_connect("localhost","root","","snow");
 function read($query){
     global $conn;
 
@@ -17,13 +16,12 @@ function read($query){
 }
 function tambah($data){
     global $conn;
-    $plat = $data ["no_polisi"];
-    $tipe = $data["tipe_mobil"];
-    $merek = $data ["merek_mobil"];
-    $warna = $data ["warna"];
-    $pemilik = $data ["pemilik"];
+    $idBook = $data ["idBook"];
+    $title = $data ["title"];
+    $stock = $data ["stock"];
+    $price = $data ["price"];
 
-    $query = "INSERT INTO data_mobil VALUES ('$plat','$tipe','$merek','$warna','$pemilik')";
+    $query = "INSERT INTO  snowdiarys (idBook, title, stock, price) VALUES ('$idBook','$title','$stock','$price')";
 
     mysqli_query($conn,$query);
     
@@ -32,21 +30,19 @@ function tambah($data){
 
 function ubah($data){
     global $conn;
-    $plat = $data ["no_polisi"];
-    $tipe = $data ["tipe_mobil"];
-    $merek = $data ["merek_mobil"];
-    $warna = $data ["warna"];
-    $pemilik = $data ["pemilik"];
+    $idBook = $data ["idBook"];
+    $title = $data ["title"];
+    $stock = $data ["stock"];
+    $price = $data ["price"];
 
     
 
-    $query = "UPDATE data_mobil SET
-                -- no_polisi = '$plat',
-                tipe_mobil = '$tipe',
-                merek_mobil = '$merek',
-                warna = '$warna',
-                pemilik = '$pemilik'
-            WHERE no_polisi = '$plat'
+    $query = "UPDATE snowdiarys SET
+
+                title = '$title',
+                stock = '$stock',
+                price = '$price',
+            WHERE idBook = '$idBook'
     ";
 
     mysqli_query($conn,$query) or die (mysqli_error($conn));

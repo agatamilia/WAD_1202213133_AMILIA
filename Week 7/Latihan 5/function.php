@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost","root","","carwash");
+$conn = mysqli_connect("localhost","root","","snow");
 
 function read($query){
     global $conn;
@@ -17,22 +17,22 @@ function read($query){
 }
 function tambah($data){
     global $conn;
-    $plat = $data ["no_polisi"];
-    $tipe = $data["tipe_mobil"];
-    $merek = $data ["merek_mobil"];
-    $warna = $data ["warna"];
+    $idBook = $data ["idBook"];
+    $title = $data["title"];
+    $stock = $data ["stock"];
+    $price = $data ["price"];
     $pemilik = $data ["pemilik"];
 
-    $query = "INSERT INTO data_mobil VALUES ('$plat','$tipe','$merek','$warna','$pemilik')";
+    $query = "INSERT INTO snowdiarys VALUES ('$idBook','$title','$stock','$price')";
 
     mysqli_query($conn,$query);
     
     return mysqli_affected_rows($conn);
 }
 
-function hapus($plt){
+function hapus($id){
     global $conn;
-    mysqli_query($conn,"DELETE FROM data_mobil WHERE no_polisi = '$plt'") or die (mysqli_error($conn));
+    mysqli_query($conn,"DELETE FROM snowdiarys WHERE idBook = '$id'") or die (mysqli_error($conn));
 
     return mysqli_affected_rows($conn);
 }
